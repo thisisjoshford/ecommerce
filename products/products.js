@@ -1,6 +1,6 @@
-const glassList = document.getElementById('glass');
 
-const createGlassArtLi = (glassArt) => {
+
+function createGlassArtLi = (glassArt) => {
     const glassArtLi = document.createElement('li');
     glassArtLi.classList.add('glassArt');
     glassArtLi.title = glassArt.description;
