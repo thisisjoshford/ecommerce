@@ -53,12 +53,12 @@ const dmt = {
 
 const mini = {
     name: 'Mini Erlenmeyer Flask Pendant',
-    image: '../assets/mini.png',
+    image: 'assets/mini.png',
     description: 'Half inch mini pendant',
     price: 100.00,
     
 };
-const bongs = [
+const glassArt = [
     lyons,
     curvy,
     puffco,
@@ -68,4 +68,4 @@ const bongs = [
     dmt,
     mini
 ];
-export default bongs;
+export default glassArt;

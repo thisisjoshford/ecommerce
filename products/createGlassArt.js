@@ -1,20 +1,18 @@
-
-
-function createGlassArtLi = (glassArt) => {
+function createGlassArtLi(glassArt) {
     const glassArtLi = document.createElement('li');
     glassArtLi.classList.add('glassArt');
     glassArtLi.title = glassArt.description;
 
     const glassArtH3 = document.createElement('h3');
-    glassArtH3.textContent = 'Curvy Flask';
+    glassArtH3.textContent = glassArt.name;
 
     const glassArtImg = document.createElement('img');
-    glassArtImg.src = '../assets/curvyFlask.png';
-    glassArtLi.appendChild();
+    glassArtImg.src = glassArt.image;
 
     const glassArtP = document.createElement('p');
     glassArtP.classList.add('price');
     glassArtP.textContent = '$' + glassArt.price.toFixed(2);
+
     const button = document.createElement('button');
     button.value = 'add';
 
@@ -23,8 +21,10 @@ function createGlassArtLi = (glassArt) => {
     glassArtLi.appendChild(glassArtP);
     glassArtLi.appendChild(button);
 
-    return createGlassArtLi;
+    return glassArtLi;
  
-}; export default createGlassArtLi;
+} 
+
+export default createGlassArtLi;
 
  
