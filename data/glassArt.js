@@ -53,7 +53,7 @@ const dmt = {
 
 const mini = {
     name: 'Mini Erlenmeyer Flask Pendant',
-    image: 'assets/mini.png',
+    image: '../assets/mini.png',
     description: 'Half inch mini pendant',
     price: 100.00,
     
