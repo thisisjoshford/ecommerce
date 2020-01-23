@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+#buy-button {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#buy-button-div {
+    text-align: center;
+}
