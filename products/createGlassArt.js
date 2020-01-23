@@ -1,6 +1,6 @@
 function createGlassArtLi(glassArt) {
     const glassArtLi = document.createElement('li');
-    glassArtLi.classList.add('glassArt');
+    glassArtLi.classList.add('glassArts');
     glassArtLi.title = glassArt.description;
 
     const glassArtH3 = document.createElement('h3');

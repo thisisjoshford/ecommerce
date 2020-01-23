@@ -3,7 +3,8 @@
 
 const test = QUnit.test;
 
-test('should return ID ', function(assert) {
+test('should return name when presented ID', function(assert) {
+    
     //Arrange
     // Set up your parameters and expectations
 

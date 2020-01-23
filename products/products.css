@@ -3,7 +3,12 @@ body {
     color: white; 
 }
 
-.product {
+.glassArts {
     list-style: none;
+    float: left;
+    /* border: 3px solid red; */
+    text-align: center;
+    padding: 1rem;
 
 }
+
