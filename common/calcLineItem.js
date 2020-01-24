@@ -1,7 +1,5 @@
-const calcLineItem = (lineItem) => {
-    const lineItemPrice = lineItem.price;
-    const lineItemAmt = lineItem.amount;
-    const lineOrderTotal = (lineItemPrice * lineItemAmt);
+const calcLineItem = (lineItem, quantity) => {
+    const lineOrderTotal = lineItem * quantity;
     return lineOrderTotal;
 } ;
 export default calcLineItem;

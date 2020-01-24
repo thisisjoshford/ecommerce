@@ -3,6 +3,7 @@ const findByID = (glassID, glassArray) => {
         const glassProduct = glassArray[i];
         if (glassProduct.id === glassID){
             return glassProduct;
+            
         }
     } };
 export default findByID;
