@@ -30,17 +30,25 @@ test('should match image when presented ID', function(assert) {
     assert.equal(result.image, expected);
 });
 
-//TDD #4 calcLineItem Function
-test('should calculate line item 1', function(assert) {
-    const lineItem = glassOrder[0];
-    const expected = 1200;
-    const result = calcLineItem(lineItem);
-    assert.equal(result, expected);
+test('should total order ', function(assert) {
+    const glassArray = glassArt;
+    const expected = '../assets/mini.png';
+    const result = findByID(glassID, glassArray);
+    assert.equal(result.image, expected);
 });
 
-test('should calculate line item 3', function(assert) {
-    const lineItem = glassOrder[2];
-    const expected = 600;
-    const result = calcLineItem(lineItem);
-    assert.equal(result, expected);
-});
+
+//TDD #4 calcLineItem Function (changed the way this functions)
+// test('should calculate line item 1', function(assert) {
+//     const lineItem = glassOrder[0];
+//     const expected = 1200;
+//     const result = calcLineItem(lineItem);
+//     assert.equal(result, expected);
+// });
+
+// test('should calculate line item 3', function(assert) {
+//     const lineItem = glassOrder[2];
+//     const expected = 600;
+//     const result = calcLineItem(lineItem);
+//     assert.equal(result, expected);
+// });
