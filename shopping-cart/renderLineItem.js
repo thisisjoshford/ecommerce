@@ -1,4 +1,6 @@
 import calcLineItem from '../common/calcLineItem.js';
+import calcOrderTotal from '../common/calcOrderTotal.js';
+import glassOrder from '../data/cart.js';
 
 function renderLineItem(lineItem, glassArt) {
     const glassArtTr = document.createElement('tr');
@@ -22,7 +24,6 @@ function renderLineItem(lineItem, glassArt) {
     totalOrder.textContent = total;
     glassArtTr.appendChild(totalOrder);
 
-    // console.log(glassOrderTr);
 
     return glassArtTr;
 }
