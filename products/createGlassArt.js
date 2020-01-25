@@ -1,6 +1,5 @@
 import findByID from '../common/findByID.js';
 
-
 function createGlassArtLi(glassArt) {
     const glassArtLi = document.createElement('li');
     glassArtLi.classList.add('glassArts');
@@ -35,8 +34,8 @@ function createGlassArtLi(glassArt) {
             glassCart = [];
         }
 
-        let lineItem = findByID(glassCart, glassArt.id);
-
+        let lineItem = findByID(glassArt.id, glassCart);
+        console.log(lineItem);
         if (!lineItem) {
             lineItem = {
                 id: glassArt.id,
@@ -65,7 +64,6 @@ function createGlassArtLi(glassArt) {
     glassArtLi.appendChild(button);
 
     return glassArtLi;
- 
 } 
 
 export default createGlassArtLi;
