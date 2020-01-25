@@ -1,5 +1,4 @@
 import glassArt from '../data/glassArt.js';
-// import glassOrder from '../data/cart.js';
 //import calcLineItem from '../common/calcLineItem.js';
 import findByID from '../common/findByID.js';
 import renderLineItem from './renderLineItem.js';

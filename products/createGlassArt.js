@@ -1,3 +1,6 @@
+import findByID from '../common/findByID.js';
+
+
 function createGlassArtLi(glassArt) {
     const glassArtLi = document.createElement('li');
     glassArtLi.classList.add('glassArts');
@@ -19,7 +22,41 @@ function createGlassArtLi(glassArt) {
     glassArtP.textContent = glassArt.description;
 
     const button = document.createElement('button');
-    button.textContent = 'Add to cart';
+    button.textContent = 'Add to Cart';
+    button.value = glassArt.id;
+    button.addEventListener('click', () => {
+
+        let json = localStorage.getItem('glassCart');
+        let glassCart;
+        if (json) {
+            glassCart = JSON.parse(json);
+        }
+        else {
+            glassCart = [];
+        }
+
+        let lineItem = findByID(glassCart, glassArt.id);
+
+        if (!lineItem) {
+            lineItem = {
+                id: glassArt.id,
+                quantity: 1
+            };
+
+            glassCart.push(lineItem);
+
+        }
+        else {
+            lineItem.quantity++;
+        }
+
+        json = JSON.stringify(glassCart);
+        localStorage.setItem('glassCart', json);
+
+        alert('1 ' + glassArt.name + 'added to your Shopping Cart');
+
+    });
+    glassArtP.appendChild(button);
 
     glassArtLi.appendChild(glassArtH3);
     glassArtLi.appendChild(glassArtImg);
