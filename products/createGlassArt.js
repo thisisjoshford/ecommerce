@@ -13,10 +13,10 @@ function createGlassArtLi(glassArt) {
     glassArtImg.width = 300;
     glassArtImg.height = 406;
    
-    const glassArtP = document.createElement('p');
-    glassArtP.classList.add('price');
-    glassArtP.textContent = '$' + glassArt.price.toFixed(2);
-    //console.log(glassArtP);
+    const glassArtPrice = document.createElement('p');
+    glassArtPrice.classList.add('price');
+    glassArtPrice.textContent = '$' + glassArt.price.toFixed(2);
+    //console.log(glassArtPrice);
 
     const glassArtDescription = document.createElement('p');
     glassArtDescription.textContent = glassArt.description;
@@ -48,11 +48,11 @@ function createGlassArtLi(glassArt) {
 
     });
 
-    //glassArtP.appendChild(button);
+    //glassArtPrice.appendChild(button);
     glassArtLi.appendChild(glassArtH3);
     glassArtLi.appendChild(glassArtImg);
-    glassArtLi.appendChild(glassArtP);
     glassArtLi.appendChild(glassArtDescription);
+    glassArtLi.appendChild(glassArtPrice);
     glassArtLi.appendChild(button);
 
     return glassArtLi;

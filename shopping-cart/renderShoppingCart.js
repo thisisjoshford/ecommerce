@@ -4,7 +4,9 @@ import findByID from '../common/findByID.js';
 import renderLineItem from './renderLineItem.js';
 import calcOrderTotal from '../common/calcOrderTotal.js';
 
+
 const tableBody = document.querySelector('tbody');
+const placeOrderButton = document.getElementById('buy-button');
 
 const json = localStorage.getItem('glassCart');
 let glassCart;
@@ -17,7 +19,17 @@ for (let i = 0; i < glassCart.length; i++) {
     const tableUpdate = renderLineItem(lineItem, glassItem);  
     tableBody.appendChild(tableUpdate);
 }
-
 const grandTotal = calcOrderTotal(glassCart, glassArt);
 const grandT = document.getElementById ('total');
 grandT.textContent = (grandTotal);
+
+if (glassCart.length === 0) {
+    placeOrderButton.disabled = true;
+}
+else {
+    placeOrderButton.addEventListener('click', () => {
+        localStorage.removeItem('glassCart');
+        alert('Your order has been placed!' + JSON.stringify(glassCart, true));
+        window.location = '../';
+    });
+}
