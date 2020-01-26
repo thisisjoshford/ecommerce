@@ -12,13 +12,14 @@ function createGlassArtLi(glassArt) {
     glassArtImg.src = glassArt.image;
     glassArtImg.width = 300;
     glassArtImg.height = 406;
-
+   
     const glassArtP = document.createElement('p');
     glassArtP.classList.add('price');
     glassArtP.textContent = '$' + glassArt.price.toFixed(2);
+    //console.log(glassArtP);
 
     const glassArtDescription = document.createElement('p');
-    glassArtP.textContent = glassArt.description;
+    glassArtDescription.textContent = glassArt.description;
 
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
@@ -26,37 +27,28 @@ function createGlassArtLi(glassArt) {
     button.addEventListener('click', () => {
 
         let json = localStorage.getItem('glassCart');
+
         let glassCart;
-        if (json) {
-            glassCart = JSON.parse(json);
-        }
-        else {
-            glassCart = [];
-        }
+        if (json) { glassCart = JSON.parse(json);}
+        else { glassCart = [];}
 
         let lineItem = findByID(glassArt.id, glassCart);
-        console.log(lineItem);
         if (!lineItem) {
             lineItem = {
                 id: glassArt.id,
                 quantity: 1
             };
-
-            glassCart.push(lineItem);
-
-        }
-        else {
-            lineItem.quantity++;
-        }
+            glassCart.push(lineItem);}
+        else { lineItem.quantity++;}
 
         json = JSON.stringify(glassCart);
         localStorage.setItem('glassCart', json);
 
-        alert('1 ' + glassArt.name + 'added to your Shopping Cart');
+        alert('1 ' + glassArt.name + ' was added to your Shopping Cart!');
 
     });
-    glassArtP.appendChild(button);
 
+    //glassArtP.appendChild(button);
     glassArtLi.appendChild(glassArtH3);
     glassArtLi.appendChild(glassArtImg);
     glassArtLi.appendChild(glassArtP);
