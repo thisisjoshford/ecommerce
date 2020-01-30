@@ -29,7 +29,7 @@ if (glassCart.length === 0) {
 else {
     placeOrderButton.addEventListener('click', () => {
         localStorage.removeItem('glassCart');
-        alert('Your order has been placed!' + JSON.stringify(glassCart, true));
+        alert('Your order has been placed!' + JSON.stringify(glassCart, true, 2));
         window.location = '../';
     });
 }

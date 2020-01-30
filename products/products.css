@@ -3,6 +3,7 @@ body {
     color: white; 
 }
 
+
 .glassArts {
     list-style: none;
     float: left;
@@ -12,5 +13,14 @@ body {
 
 }
 
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+#pbutton {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+90

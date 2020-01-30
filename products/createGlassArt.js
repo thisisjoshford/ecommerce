@@ -33,6 +33,7 @@ function createGlassArtLi(glassArt) {
         else { glassCart = [];}
 
         let lineItem = findByID(glassArt.id, glassCart);
+        console.log(lineItem);
         if (!lineItem) {
             lineItem = {
                 id: glassArt.id,
