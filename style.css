@@ -1,4 +1,22 @@
-body {
-    background-color: black;
-    color: white;
-}
+ body {
+    
+     background-color: black;
+     
+ }
+
+ #background {
+
+    background-image: url('./assets/background.jpg');
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+
+ }
+
+ #logo {
+     width: 125px;
+     height: 150px;
+
+     
+ }
